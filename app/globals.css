@@ -43,3 +43,9 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
+
+.grid-custom {
+	display: grid;
+	height: 100%;
+	grid-template-rows: 10vh 84vh 6vh;
+}

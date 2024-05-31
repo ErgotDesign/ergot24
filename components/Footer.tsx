@@ -1,21 +1,31 @@
+"use client";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Footer() {
 	return (
-		<footer className="w-full bg-beige text-purple py-2 px-8">
-			<div className="mx-auto w-full flex">
-				<div className="w-1/2">
-					<h1 className="uppercase text-xl">
-						ergot <span className="text-sm">© 2024</span>
-						<span className="font-bacalisties font-extrabold normal-case text-lg">
-							{" "}
-							by Incepted.dev
-						</span>
-					</h1>
-				</div>
-				<div className="w-1/2 flex items-center justify-end space-x-6 ">
+		<footer className="w-full h-full bg-beige text-purple px-8">
+			<div className="mx-auto w-full flex items-center">
+				<motion.div
+					initial={{ opacity: 0, x: -200 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1 }}
+					className="w-1/2 flex items-center"
+				>
+					<h1 className="uppercase text-3xl">ergot</h1>
+					<h3 className="font-bacalisties font-extrabold normal-case text-lg pt-3">
+						© by Incepted.dev
+					</h3>
+				</motion.div>
+
+				<motion.div
+					initial={{ opacity: 0, x: 200 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 1 }}
+					className="w-1/2 flex items-center justify-end space-x-6 "
+				>
 					<a
-						href="https://facebook.com"
+						href="https://www.facebook.com/ergot.de"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Facebook"
@@ -23,7 +33,7 @@ function Footer() {
 						<FaFacebook size={24} />
 					</a>
 					<a
-						href="https://instagram.com"
+						href="https://instagram.com/ergot_official"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Instagram"
@@ -38,7 +48,7 @@ function Footer() {
 					>
 						<FaTiktok size={24} />
 					</a>
-				</div>
+				</motion.div>
 			</div>
 		</footer>
 	);

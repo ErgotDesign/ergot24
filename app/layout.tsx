@@ -28,11 +28,14 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={myFont.className}>
-				<div className="w-screen h-screen min-h-screen overflow-auto hide-scrollbar">
-					<Navbar />
+				<div className="w-screen h-screen max-h-screen grid-custom">
+					<div className="bg-purple">
+						<Navbar />
+					</div>
 
-					{children}
-					<footer>
+					<div className="flex-grow bg-black">{children}</div>
+
+					<footer className="bg-beige flex items-center justify-center">
 						<Footer />
 					</footer>
 				</div>

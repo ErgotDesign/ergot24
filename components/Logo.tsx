@@ -5,7 +5,7 @@ import logo from "../public/Logo.png";
 
 function Logo() {
 	return (
-		<div className="relative w-32 2xl:w-40 mt-20 z-50">
+		<div className="relative w-32 2xl:w-40 mt-16 z-50">
 			<Image
 				src={logo}
 				alt="Circle"

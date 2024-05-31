@@ -7,6 +7,7 @@ import image4 from "@/public/carosello/4.jpg";
 import image5 from "@/public/carosello/5.jpg";
 import image6 from "@/public/carosello/6.jpg";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Carosello() {
 	const images = [image1, image2, image3, image4, image5, image6];
@@ -20,18 +21,20 @@ function Carosello() {
 	}, [images.length]);
 
 	return (
-		<div className="relative w-full max-h-[720px] bg-beige mx-auto  overflow-hidden rounded-full border-8  border-black">
-			{images.map((image, index) => (
-				<Image
-					key={index + 1}
-					src={image}
-					alt={`Slide ${index}`}
-					className="w-full h-full transition-shadow"
-					style={{
-						display: currentIndex === index ? "block" : "none",
-					}}
-				/>
-			))}
+		<div className="relative w-full max-h-[82vh] bg-beige mx-auto overflow-hidden rounded-full border-8 border-black">
+			<AnimatePresence>
+				{images.map((image, index) => (
+					<Image
+						key={index + 1}
+						src={image}
+						alt={`Slide ${index}`}
+						className="w-full h-full transition-shadow"
+						style={{
+							display: currentIndex === index ? "block" : "none",
+						}}
+					/>
+				))}
+			</AnimatePresence>
 		</div>
 	);
 }

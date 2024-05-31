@@ -2,7 +2,7 @@ import Image from "next/image";
 import model from "@/public/img/clown.jpg";
 const page = () => {
 	return (
-		<div className="w-full lg:h-[720px] bg-beige flex justify-center items-end overflow-hidden">
+		<div className="w-full h-full bg-beige flex justify-center items-end overflow-hidden">
 			<div className="w-2/3 h-[30rem] flex flex-coljustify-end items-end ">
 				<Image
 					src={model}
